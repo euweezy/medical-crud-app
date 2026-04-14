@@ -1,6 +1,7 @@
 import { pool } from '../lib/db';
 import { deleteMedicalTest, createMedicalTest } from '../lib/actions'; 
 import DeleteButton from '@/app/components/DeleteButton';
+import ExportButton from '../components/ExportButton';
 
 export const dynamic = 'force-dynamic'; 
 
@@ -46,6 +47,7 @@ export default async function MedicalTestsPage() {
           <button type="submit" className="bg-green-600 text-white font-bold py-2 rounded hover:bg-green-700 transition-colors">
             Save Test
           </button>
+          <ExportButton tableName="medicaltests" />
         </form>
       </section>
       

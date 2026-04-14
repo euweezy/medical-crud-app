@@ -1,6 +1,7 @@
 import { pool } from '../lib/db';
 import { deleteUom, createUom } from '../lib/actions'; 
 import DeleteButton from '../components/DeleteButton';
+import ExportButton from '../components/ExportButton';
 
 export const dynamic = 'force-dynamic'; 
 
@@ -31,6 +32,7 @@ export default async function UOMPage() {
           >
             Add Unit
           </button>
+          <ExportButton tableName="uom" />
         </form>
       </section>
       

@@ -1,6 +1,7 @@
 import { pool } from '../lib/db';
 import { deleteCategory, createCategory } from '../lib/actions';
 import DeleteButton from '@/app/components/DeleteButton';
+import ExportButton from '../components/ExportButton';
 
 export const dynamic = 'force-dynamic'; 
 
@@ -31,6 +32,7 @@ export default async function CategoriesPage() {
           >
             Create
           </button>
+          <ExportButton tableName="testcategories" />
         </form>
       </section>
       
