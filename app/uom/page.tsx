@@ -2,6 +2,7 @@ import { pool } from '../lib/db';
 import { deleteUom, createUom } from '../lib/actions'; 
 import DeleteButton from '../components/DeleteButton';
 import ExportButton from '../components/ExportButton';
+import SubmitButton from '../components/SubmitButton';
 
 export const dynamic = 'force-dynamic'; 
 
@@ -26,12 +27,7 @@ export default async function UOMPage() {
             placeholder="Full Description" 
             className="flex-[2] p-2.5 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none" 
           />
-          <button 
-            type="submit" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-2.5 rounded-lg text-sm font-bold transition-all shadow-md active:scale-95"
-          >
-            Add Unit
-          </button>
+          <SubmitButton label="Add Unit" />
           <ExportButton tableName="uom" />
         </form>
       </section>

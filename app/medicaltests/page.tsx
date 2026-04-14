@@ -2,6 +2,7 @@ import { pool } from '../lib/db';
 import { deleteMedicalTest, createMedicalTest } from '../lib/actions'; 
 import DeleteButton from '@/app/components/DeleteButton';
 import ExportButton from '../components/ExportButton';
+import SubmitButton from '../components/SubmitButton';
 
 export const dynamic = 'force-dynamic'; 
 
@@ -44,9 +45,7 @@ export default async function MedicalTestsPage() {
           <input name="normalmin" type="number" step="0.01" placeholder="Min Value" className="p-2 border rounded bg-white" />
           <input name="normalmax" type="number" step="0.01" placeholder="Max Value" className="p-2 border rounded bg-white" />
           
-          <button type="submit" className="bg-green-600 text-white font-bold py-2 rounded hover:bg-green-700 transition-colors">
-            Save Test
-          </button>
+          <SubmitButton label="Add Test" />
           <ExportButton tableName="medicaltests" />
         </form>
       </section>

@@ -2,6 +2,7 @@ import { pool } from '../lib/db';
 import { deleteCategory, createCategory } from '../lib/actions';
 import DeleteButton from '@/app/components/DeleteButton';
 import ExportButton from '../components/ExportButton';
+import SubmitButton from '../components/SubmitButton';
 
 export const dynamic = 'force-dynamic'; 
 
@@ -26,12 +27,7 @@ export default async function CategoriesPage() {
             placeholder="Description (Optional)" 
             className="flex-[2] p-2 border rounded text-sm" 
           />
-          <button 
-            type="submit" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm font-bold transition-colors"
-          >
-            Create
-          </button>
+          <SubmitButton label="Add Category" />
           <ExportButton tableName="testcategories" />
         </form>
       </section>
